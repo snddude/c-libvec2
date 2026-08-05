@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.31)
 project(vec2)
 
+set(CMAKE_C_FLAGS "-Wall -Wextra -pedantic")
+
 add_library(${PROJECT_NAME} STATIC src/vec2.c)
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 
