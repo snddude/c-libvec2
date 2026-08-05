@@ -10,7 +10,7 @@ if(${BUILD_TESTS})
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-    add_subdirectory(extern/googletest)
+    add_subdirectory(external/googletest)
     enable_testing()
 
     file(GLOB TEST_SOURCES test/*.cpp)
