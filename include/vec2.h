@@ -2,19 +2,19 @@
 
 #include <stdint.h>
 
-#define VEC2I_ZERO  (vec2i_t){  0,  0 }
-#define VEC2I_ONE   (vec2i_t){  1,  1 }
-#define VEC2I_UP    (vec2i_t){  0, -1 }
-#define VEC2I_LEFT  (vec2i_t){ -1,  0 }
-#define VEC2I_DOWN  (vec2i_t){  0,  1 }
-#define VEC2I_RIGHT (vec2i_t){  1,  0 }
+#define VEC2I_ZERO  ( (vec2i_t){  0,  0 } )
+#define VEC2I_ONE   ( (vec2i_t){  1,  1 } )
+#define VEC2I_UP    ( (vec2i_t){  0, -1 } )
+#define VEC2I_LEFT  ( (vec2i_t){ -1,  0 } )
+#define VEC2I_DOWN  ( (vec2i_t){  0,  1 } )
+#define VEC2I_RIGHT ( (vec2i_t){  1,  0 } )
 
-#define VEC2F_ZERO  (vec2f_t){  0.0f,  0.0f }
-#define VEC2F_ONE   (vec2f_t){  1.0f,  1.0f }
-#define VEC2F_UP    (vec2f_t){  0.0f, -1.0f }
-#define VEC2F_LEFT  (vec2f_t){ -1.0f,  0.0f }
-#define VEC2F_DOWN  (vec2f_t){  0.0f,  1.0f }
-#define VEC2F_RIGHT (vec2f_t){  1.0f,  0.0f }
+#define VEC2F_ZERO  ( (vec2f_t){  0.0f,  0.0f } )
+#define VEC2F_ONE   ( (vec2f_t){  1.0f,  1.0f } )
+#define VEC2F_UP    ( (vec2f_t){  0.0f, -1.0f } )
+#define VEC2F_LEFT  ( (vec2f_t){ -1.0f,  0.0f } )
+#define VEC2F_DOWN  ( (vec2f_t){  0.0f,  1.0f } )
+#define VEC2F_RIGHT ( (vec2f_t){  1.0f,  0.0f } )
 
 #define vec2_dot(v1, v2)   ( (v1).x * (v2).x + (v1).y * (v2).y )
 #define vec2_cross(v1, v2) ( (v1).x * (v2).y - (v1).y * (v2).x )
