@@ -8,10 +8,14 @@ if(${BUILD_TESTS})
     set(CMAKE_CXX_STANDARD 17)
     set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+    add_subdirectory(extern/googletest)
     enable_testing()
 
-    add_subdirectory(extern/googletest)
+    file(GLOB TEST_SOURCES test/*.cpp)
+    add_executable(tests ${TEST_SOURCES})
 
-    add_executable(constants test/constants.cpp)
-    target_link_libraries(constants PRIVATE vec2 GTest::gtest_main)
+    target_link_libraries(tests PRIVATE vec2 GTest::gtest_main)
+
+    include(GoogleTest)
+    gtest_discover_tests(tests)
 endif()
