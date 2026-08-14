@@ -3,17 +3,17 @@
 extern "C"
     #include "vec2.h"
 
+// Dot product of a vector with itself
+// is equal to it's length squared.
+#define len2(v) ( (v).x * (v).x + (v).y * (v).y )
+
 TEST(DotProduct, WithSelf)
 {   
     vec2i_t ivec = { 13, -22 };
-    int ilen2 = ivec.x * ivec.x + ivec.y * ivec.y;
-    int idot = vec2_dot(ivec, ivec);
-    EXPECT_EQ(ilen2, idot);
+    EXPECT_EQ(len2(ivec), vec2_dot(ivec, ivec));
 
     vec2f_t fvec = {-0.15f, 8.924f};
-    float flen2 = fvec.x * fvec.x + fvec.y * fvec.y;
-    float fdot = vec2_dot(fvec, fvec);
-    EXPECT_EQ(flen2, fdot);
+    EXPECT_EQ(len2(fvec), vec2_dot(fvec, fvec));
 }
 
 TEST(DotProduct, WithZero)
